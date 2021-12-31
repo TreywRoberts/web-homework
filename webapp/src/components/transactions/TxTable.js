@@ -49,7 +49,7 @@ const styles = css`
   }
   
   form * {
-    font-size: 28px;
+    font-size: 29px;
   }
  
 `
