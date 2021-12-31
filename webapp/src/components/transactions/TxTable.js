@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import { arrayOf, string, bool, number, shape } from 'prop-types'
 import { css } from '@emotion/core'
+
 import EditRow from '../rows/EditRow'
 import ReadRow from '../rows/ReadRow'
 
