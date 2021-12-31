@@ -59,7 +59,7 @@ const rules = [
 
 const config = {
   context: root,
-  entry: './src/index.js',
+  entry: ['./src/index.js'],
   mode: JSON.stringify('development'),
   output: {
     path: outputDirectory,
