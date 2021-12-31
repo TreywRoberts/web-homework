@@ -16,6 +16,7 @@ mutation addTransaction(
         debit: $debit
         credit: $credit
         amount: $amount
+        
         ){
         id
     }

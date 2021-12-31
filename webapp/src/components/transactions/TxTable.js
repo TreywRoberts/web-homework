@@ -1,18 +1,16 @@
 import React, {Fragment, useState} from 'react'
 import { arrayOf, string, bool, number, shape } from 'prop-types'
 import { css } from '@emotion/core'
-import { useMutation } from '@apollo/client';
-import { EDIT_TRANSACTION } from '../../gql/mutation.js'
 import EditRow from '../rows/EditRow'
 import ReadRow from '../rows/ReadRow'
 
 const styles = css`
 
-   .app-container {
+  form {
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items: center;
+    // justify-content:center;
+    // align-items: center;
     gap: 10px;
     padding: 1rem;
   }
@@ -27,7 +25,7 @@ const styles = css`
     border: 1px solid #ffffff;
     text-align: center;
     padding: 8px;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   th {
@@ -49,7 +47,7 @@ const styles = css`
   }
   
   form * {
-    font-size: 29px;
+    font-size: 28px;
   }
  
 `
@@ -67,10 +65,7 @@ export function TxTable ({ data }) {
     amount: 0
   })
   const [editContactId, setEditContactId] = useState(null)
-  const [ editTransaction, {error} ] = useMutation(EDIT_TRANSACTION);
 
-  const [debit, setDebit] = useState(editFormData.debit);
-  const [credit, setCredit] = useState(editFormData.credit);
 
   const handleEditFormChange = (e) =>{
     e.preventDefault();
@@ -83,7 +78,6 @@ export function TxTable ({ data }) {
 
     setEditFormData(newFormData)
   }
-  console.log(editFormData)
 
   const handleEditClick =(event, tx) =>{
     event.preventDefault();
@@ -103,28 +97,9 @@ export function TxTable ({ data }) {
 
   }
 
-  const editTrans = (e) =>{
-    editTransaction({
-        variables: {
-            id: editFormData.id,
-            user_id: editFormData.user_id,
-            description: editFormData.description,
-            merchant_id: editFormData.merchant_id,
-            debit: debit,
-            credit: credit,
-            amount: parseInt(editFormData.amount)
-        }
-    });
-    if (error){
-        console.log(error)
-    }
-}
-
   const handleCancel = () =>{
     setEditContactId(null)
   }
-  console.log(debit, credit)
-
   
 
 
@@ -132,7 +107,7 @@ export function TxTable ({ data }) {
 
   return (
     <div className='app-container'>
-    <form onSubmit={editTrans}>
+    <form>
     <table css={styles}>
       <tbody>
         <tr className='header'>
@@ -147,18 +122,10 @@ export function TxTable ({ data }) {
         </tr>
         {
           data.map(tx => {
-            // const { id, user_id: userId, description, merchant_id: merchantId, debit, credit, amount } = tx
             return(
               <Fragment>
                 {editContactId === tx.id ? (
-                <EditRow 
-                  editFormData={editFormData}
-                  handleEditFormChange={handleEditFormChange} 
-                  handleCancel={handleCancel}
-                  setDebit={setDebit}
-                  setCredit={setCredit}
-                 
-                 /> ): (
+                <EditRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancel={handleCancel} /> ): (
                 <ReadRow tx={tx} handleEditClick={handleEditClick}/>)}
               </Fragment>
 

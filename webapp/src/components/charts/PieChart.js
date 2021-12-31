@@ -29,16 +29,11 @@ const PieChart = ({data}) => {
                     backgroundColor: [
                         "red", "blue", "yellow"
                     ],
-                    // borderColor: [
-                    //     'rgba(255, 99, 132, 1)',
-                    //     'rgba(54, 162, 235, 1)',
-                    //     'rgba(255, 206, 86, 1)',
-                    // ],
                 }],
             }}
 
-            height={100}
-            width={100}
+            height={300}
+            width={300}
             options={{
                 maintainAspectRatio: false,
                 scales: {

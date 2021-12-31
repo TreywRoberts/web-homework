@@ -30,7 +30,7 @@ p{
 }
 `
 
-const Home2 = () => {
+const Home = () => {
     return (
         <div>
         <div className='home' css={styles}>
@@ -53,4 +53,4 @@ const Home2 = () => {
     )
 }
 
-export default Home2
+export default Home
