@@ -1,11 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { css } from '@emotion/core';
-import { Home } from './home';
-import Home2 from './components/pages/Home2';
-// import Tracker from './photos/Tracker.png'
-
-// const Tracker = require('./photos/Tracker.png')
+import { Transactions } from './transactionData/Transactions';
+import Home from './components/pages/Home';
 
 function AppRouter () {
   return (
@@ -13,20 +10,17 @@ function AppRouter () {
       <div css={layoutStyle}>
         <nav css={navStyle}>
           <ul >
-            {/* <li>
-              <img src={Tracker} />
-            </li> */}
             <li>
               <a href='/'>Home</a>
             </li>
             <li>
-              <a href='/another'>Your Transactions</a>
+              <a href='/transactions'>Your Transactions</a>
             </li>
           </ul>
         </nav>
         <div className='main-content' css={contentStyle}>
-          <Route component={Home2} exact path='/' />
-          <Route component={Home} exact path='/another' />
+          <Route component={Home} exact path='/' />
+          <Route component={Transactions} exact path='/another' />
         </div>
         <div className='footer'>
         <nav css={navStyle}>

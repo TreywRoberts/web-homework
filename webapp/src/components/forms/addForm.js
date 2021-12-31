@@ -7,9 +7,6 @@ const styles = css`
     form{
         display: flex;
         flex-direction: column;
-        input[type="radio"] {
-            display: inline-block;    
-          };
     };
 
 `
@@ -25,7 +22,7 @@ function AddForm ({modalClose}){
 
     const [ addTransaction, {error} ] = useMutation(ADD_TRANSACTION);
 
-    const newTrans = () =>{
+    const newTrans = (e) =>{
         addTransaction({
             variables: {
                 user_id: userid,
@@ -40,10 +37,6 @@ function AddForm ({modalClose}){
             console.log(error)
         }
     }
-
-    // console.log(debit,"dbit")
-    // console.log(credit, "crdeit")
-
 
     return(
     <div css={styles}>
@@ -67,8 +60,9 @@ function AddForm ({modalClose}){
         onChange={(e)=>{
             setDescription(e.target.value)
         }}
-        >
-            <option value="Food">Food</option>
+        >   
+            <option label='Select One' hidden></option>
+            <option value="Food" >Food</option>
             <option value="Fun">Fun</option>
             <option value="Gas">Gas</option>
         </select>

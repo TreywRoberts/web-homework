@@ -7,9 +7,16 @@ import Modal from 'react-modal';
 
 import AddForm from '../components/forms/addForm'
 import PieChart from '../components/charts/PieChart'
-const styles = css
+const styles = css`
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+gap: 10px;
+padding: 1rem;
+`
 
-export function Home () {
+export function Transactions () {
   const { loading, error, data = {} } = useQuery(GetTransactions)
   const [modal, setModal] = useState(false)
 

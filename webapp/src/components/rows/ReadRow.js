@@ -5,10 +5,9 @@ import { DELETE_TRANSACTION } from '../../gql/mutation'
 const makeDataTestId = (transactionId, fieldName) => `transaction-${transactionId}-${fieldName}`
 
 const ReadRow = ({tx, handleEditClick}) => {
-    
+
     const [deleteTransaction]= useMutation(DELETE_TRANSACTION)
 
-    // console.log(tx)
     return (
         <tr data-testid={`transaction-${tx.id}`} key={`transaction-${tx.id}`}>
         {/* <td data-testid={makeDataTestId(tx.id, 'tx.id')}>{tx.id}</td> */}
@@ -22,7 +21,6 @@ const ReadRow = ({tx, handleEditClick}) => {
             <button type='button' onClick={(event)=> handleEditClick(event, tx)}>edit</button>
         <button onClick={()=>{
           deleteTransaction({variables: {id: tx.id}})
-          console.log(id)
         }}>delete</button>
         </td>
       </tr>
