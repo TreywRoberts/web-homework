@@ -1,12 +1,14 @@
-import React, { Fragment, useState } from 'react'
-import { useQuery } from '@apollo/client'
-import GetTransactions from '../gql/transactions.gql'
-import { TxTable } from '../components/transactions/TxTable'
-import { css } from '@emotion/core'
+import React, { Fragment, useState } from 'react';
+import { useQuery } from '@apollo/client';
+import GetTransactions from '../gql/transactions.gql';
+import { TxTable } from '../components/transactions/TxTable';
+import { css } from '@emotion/core';
 import Modal from 'react-modal';
 
-import AddForm from '../components/forms/addForm'
-import PieChart from '../components/charts/PieChart'
+import AddForm from '../components/forms/addForm';
+import PieChart from '../components/charts/PieChart';
+
+
 const styles = css`
 display: flex;
 flex-direction: column;
@@ -22,11 +24,11 @@ export function Transactions () {
 
     const modalOpen =()=>{
         setModal(true)
-    }
+    };
 
     const modalClose = ()=>{
         setModal(false)
-    }
+    };
 
     const customStyles = {
       content : {
@@ -39,6 +41,7 @@ export function Transactions () {
         backgroundColor       : '#f6f4e9',
       }
   };
+
 
   if (loading) {
     return (
