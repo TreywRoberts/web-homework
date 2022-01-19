@@ -27,7 +27,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         if (error){
             console.log(error)
         }
-        // location.reload()
+        location.reload()
     }
 
 

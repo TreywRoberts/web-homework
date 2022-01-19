@@ -20,7 +20,7 @@ function AppRouter () {
         </nav>
         <div className='main-content' css={contentStyle}>
           <Route component={Home} exact path='/' />
-          <Route component={Transactions} exact path='/another' />
+          <Route component={Transactions} exact path='/transactions' />
         </div>
         <div className='footer'>
         <nav css={navStyle}>
@@ -29,7 +29,7 @@ function AppRouter () {
               <a href='/'>Home</a>
             </li>
             <li>
-              <a href='/another'>Your Transactions</a>
+              <a href='/transactions'>Your Transactions</a>
             </li>
           </ul>
         </nav>
