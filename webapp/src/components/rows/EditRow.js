@@ -4,6 +4,8 @@ import { EDIT_TRANSACTION } from '../../gql/mutation.js'
 
 const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
 
+    const test = null;
+
     const [ editTransaction, {error} ] = useMutation(EDIT_TRANSACTION);
 
     const [debit, setDebit] = useState(editFormData.debit);
@@ -27,7 +29,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         if (error){
             console.log(error)
         }
-        // location.reload()
+        location.reload()
     }
 
 
