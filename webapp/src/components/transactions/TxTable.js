@@ -1,9 +1,9 @@
-import React, {Fragment, useState} from 'react'
-import { arrayOf, string, bool, number, shape } from 'prop-types'
-import { css } from '@emotion/core'
+import React, {Fragment, useState} from 'react';
+import { arrayOf, string, bool, number, shape } from 'prop-types';
+import { css } from '@emotion/core';
 
-import EditRow from '../rows/EditRow'
-import ReadRow from '../rows/ReadRow'
+import EditRow from '../rows/EditRow';
+import ReadRow from '../rows/ReadRow';
 
 const styles = css`
 
@@ -54,7 +54,7 @@ const styles = css`
 `
 
 
-export function TxTable ({ data }) {
+export function TxTable ({data }) {
   
   const [editFormData, setEditFormData] =useState({
     id:"",
@@ -66,6 +66,19 @@ export function TxTable ({ data }) {
     amount: 0
   })
   const [editContactId, setEditContactId] = useState(null)
+
+  const [amount, setAmount] = useState(0)
+
+   const handleRomanConvertClick = (e, num)=>{
+      e.preventDefault()
+      if(Number.isInteger(amount)){
+        setAmount(RomanConverter(num))
+      }else{
+        setAmount(amount)
+      }
+    }
+
+    console.log(amount)
 
 
   const handleEditFormChange = (e) =>{
@@ -127,7 +140,7 @@ export function TxTable ({ data }) {
               <Fragment>
                 {editContactId === tx.id ? (
                 <EditRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancel={handleCancel} /> ): (
-                <ReadRow tx={tx} handleEditClick={handleEditClick}/>)}
+                <ReadRow tx={tx} handleEditClick={handleEditClick} />)}
               </Fragment>
 
             )

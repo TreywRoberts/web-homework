@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ADD_TRANSACTION } from '../../gql/mutation.js'
+import { ADD_TRANSACTION } from '../../gql/mutation.js';
 import { useMutation } from '@apollo/client';
-import { css } from '@emotion/core'
+import { css } from '@emotion/core';
 
 const styles = css`
     form{

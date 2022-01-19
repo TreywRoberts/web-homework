@@ -1,10 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import { useMutation } from '@apollo/client';
-import { EDIT_TRANSACTION } from '../../gql/mutation.js'
+import { EDIT_TRANSACTION } from '../../gql/mutation.js';
 
 const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
-
-    const test = null;
 
     const [ editTransaction, {error} ] = useMutation(EDIT_TRANSACTION);
 
@@ -29,7 +27,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         if (error){
             console.log(error)
         }
-        location.reload()
+        setTimeout(location.reload.bind(location), 500)
     }
 
 
@@ -40,6 +38,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         type="text"
         placeholder="User"
         id='user_id'
+        required
         value={editFormData.user_id}
         onChange={handleEditFormChange}
         >
@@ -59,6 +58,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         type="text"
         placeholder="Merchant"
         id='merchant_id'
+        required
         value={editFormData.merchant_id}
         onChange={handleEditFormChange}
         >
@@ -91,6 +91,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         type="number"
         placeholder="Amount"
         id='amount'
+        required
         value={editFormData.amount}
         onChange={handleEditFormChange}
         >
