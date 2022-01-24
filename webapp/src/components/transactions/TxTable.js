@@ -67,20 +67,6 @@ export function TxTable ({data }) {
   })
   const [editContactId, setEditContactId] = useState(null)
 
-  const [amount, setAmount] = useState(0)
-
-   const handleRomanConvertClick = (e, num)=>{
-      e.preventDefault()
-      if(Number.isInteger(amount)){
-        setAmount(RomanConverter(num))
-      }else{
-        setAmount(amount)
-      }
-    }
-
-    console.log(amount)
-
-
   const handleEditFormChange = (e) =>{
     e.preventDefault();
 
@@ -137,7 +123,7 @@ export function TxTable ({data }) {
         {
           data.map(tx => {
             return(
-              <Fragment>
+              <Fragment key={`transaction-${tx.id}`}>
                 {editContactId === tx.id ? (
                 <EditRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancel={handleCancel} /> ): (
                 <ReadRow tx={tx} handleEditClick={handleEditClick} />)}

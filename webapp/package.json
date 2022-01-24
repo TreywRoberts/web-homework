@@ -6,7 +6,7 @@
     "build": "webpack -d",
     "reset": "rm -rf node_modules 2> /dev/null && yarn boot",
     "start": "webpack-dev-server -d --hot",
-    "test": "jest --coverage"
+    "test": "jest --maxWorkers=1 --env=jest-environment-jsdom-sixteen"
   },
   "resolutions": {
     "elliptic": " 6.5.3",
@@ -71,9 +71,9 @@
     "graphql": "14.3.1",
     "graphql-tag": "^2.10.1",
     "prop-types": "15.7.2",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-chartjs-2": "^4.0.0",
-    "react-dom": "16.8.6",
+    "react-dom": "16.9.0",
     "react-hot-loader": "4.11.0",
     "react-modal": "^3.14.4",
     "react-router-dom": "5.0.1"
@@ -109,8 +109,10 @@
     "@babel/register": "7.4.4",
     "@babel/runtime": "7.4.5",
     "@emotion/babel-preset-css-prop": "10.0.9",
+    "@testing-library/dom": "^8.11.2",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "10.4.9",
+    "@testing-library/user-event": "^13.5.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.6",
@@ -146,6 +148,7 @@
     "jest-chain": "1.1.2",
     "jest-dom": "3.5.0",
     "jest-emotion": "10.0.32",
+    "jest-environment-jsdom-sixteen": "^2.0.0",
     "jest-expect-message": "1.0.2",
     "jest-fetch-mock": "2.1.2",
     "jest-json-schema": "2.0.2",

@@ -1,0 +1,5 @@
+mutation deleteTransaction($id: String!){
+    deleteTransaction(id: $id){
+        id
+    }
+}
