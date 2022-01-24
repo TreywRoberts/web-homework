@@ -84,6 +84,7 @@ function AddForm ({modalClose}){
         className='radio'
         type="radio"
         id='debit'
+        aria-label='debit'
         name='paymentType'
         value={!debit}
         required
@@ -92,11 +93,12 @@ function AddForm ({modalClose}){
             setCredit(false)
         }}
         />
-        <label>Credit</label>
+        <label >Credit</label>
         <input
         className='radio'
         type="radio"
         id='credit'
+        aria-label='credit'
         name='paymentType'
         value={!credit}
         required

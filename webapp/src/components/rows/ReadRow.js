@@ -8,6 +8,8 @@ const makeDataTestId = (transactionId, fieldName) => `transaction-${transactionI
 
 const ReadRow = ({tx, handleEditClick}) => {
 
+  console.log(tx.user_id)
+
     const [deleteTransaction]= useMutation(DELETE_TRANSACTION)
     const [buttonText, setButtonText] = useState('To Numeral')
     const [amount, setAmount] = useState(tx.amount)
@@ -33,11 +35,12 @@ const ReadRow = ({tx, handleEditClick}) => {
         <td data-testid={makeDataTestId(tx.id, 'credit')}>{tx.credit.toString()}</td>
         <td data-testid={makeDataTestId(tx.id, 'amount')}>{amount}</td>
         <td>
-            <button type='button' onClick={(event)=> handleEditClick(event, tx)}>edit</button>
-        <button onClick={()=>{
+
+        <button data-testid={makeDataTestId(tx.id, 'editButton')} type='button' onClick={(event)=> handleEditClick(event, tx)}>edit</button>
+        <button data-testid={makeDataTestId(tx.id, 'deleteButton')} onClick={()=>{
           deleteTransaction({variables: {id: tx.id}})
         }}>delete</button>
-        <button onClick={(e)=>{handleRomanConvertClick(e, amount)}}>{buttonText}</button>
+        <button data-testid={makeDataTestId(tx.id, 'numeralButton')} onClick={(e)=>{handleRomanConvertClick(e, amount)}}>{buttonText}</button>
         </td>
       </tr>
     )

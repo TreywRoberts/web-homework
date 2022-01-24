@@ -7,7 +7,6 @@ const transactions = [
     'debit': true,
     'credit': false,
     'amount': 150,
-    '__typename': 'Transaction'
   },
   {
     'id': '5d5c1f747e01cd704f18f864',
@@ -17,7 +16,6 @@ const transactions = [
     'debit': false,
     'credit': true,
     'amount': 250,
-    '__typename': 'Transaction'
   },
   {
     'id': '5d5c1f747e01cd704f18f865',
@@ -27,7 +25,6 @@ const transactions = [
     'debit': false,
     'credit': true,
     'amount': 100,
-    '__typename': 'Transaction'
   }
 ]
 

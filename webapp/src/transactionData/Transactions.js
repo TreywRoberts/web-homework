@@ -30,6 +30,7 @@ export function Transactions () {
         setModal(false)
     };
 
+
     const customStyles = {
       content : {
         top                   : '50%',
@@ -54,7 +55,7 @@ export function Transactions () {
   if (error) {
     return (
       <Fragment>
-        ¯\_(ツ)_/¯
+        Error
       </Fragment>
     )
   }
@@ -63,8 +64,8 @@ export function Transactions () {
     <Fragment>
       <div css={styles}>
         <TxTable data={data.transactions} />
-        <button onClick={modalOpen}>Add New Transaction</button>
-                  <Modal isOpen={modal} style={customStyles} onRequestClose={modalClose}>
+        <button data-testid="addButton" onClick={modalOpen}>Add New Transaction</button>
+                  <Modal isOpen={modal} style={customStyles} ariaHideApp={false} onRequestClose={modalClose}>
                       <AddForm modalClose={modalClose} />
                   </Modal>
         <PieChart data={data.transactions}/>

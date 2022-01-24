@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transactions Page should render loading message 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`Transactions Page should render with error 1`] = `
+<div>
+  Error
+</div>
+`;
+
+exports[`Transactions Page should show user "employee4" with amount "150" 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`Transactions Page should show user "employee4" with amount "150" 2`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.emotion-0 form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.emotion-0 table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.emotion-0 th,
+.emotion-0 td {
+  border: 1px solid #ffffff;
+  text-align: center;
+  padding: 8px;
+  font-size: 2rem;
+}
+
+.emotion-0 th {
+  background-color: #f6f4e9;
+}
+
+.emotion-0 td {
+  background-color: #f2f5fb;
+}
+
+.emotion-0 form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.emotion-0 form td:last-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.emotion-0 form * {
+  font-size: 28px;
+}
+
+<div>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="app-container"
+    >
+      <form>
+        <table
+          class="emotion-0"
+        >
+          <tbody>
+            <tr
+              class="header"
+            >
+              <th>
+                User ID
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Merchant ID
+              </th>
+              <th>
+                Debit
+              </th>
+              <th>
+                Credit
+              </th>
+              <th>
+                Amount
+              </th>
+              <th>
+                Actions
+              </th>
+            </tr>
+            <tr
+              data-testid="transaction-5d5c1f747e01cd704f18f863"
+            >
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f863-userId"
+              >
+                employee4
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f863-description"
+              >
+                cleaningsupplies
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f863-merchant"
+              >
+                walmart
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f863-debit"
+              >
+                true
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f863-credit"
+              >
+                false
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f863-amount"
+              >
+                150
+              </td>
+              <td>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f863-editButton"
+                  type="button"
+                >
+                  edit
+                </button>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f863-deleteButton"
+                >
+                  delete
+                </button>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f863-numeralButton"
+                >
+                  To Numeral
+                </button>
+              </td>
+            </tr>
+            <tr
+              data-testid="transaction-5d5c1f747e01cd704f18f864"
+            >
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f864-userId"
+              >
+                employee3
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f864-description"
+              >
+                refund
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f864-merchant"
+              >
+                walmart
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f864-debit"
+              >
+                false
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f864-credit"
+              >
+                true
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f864-amount"
+              >
+                250
+              </td>
+              <td>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f864-editButton"
+                  type="button"
+                >
+                  edit
+                </button>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f864-deleteButton"
+                >
+                  delete
+                </button>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f864-numeralButton"
+                >
+                  To Numeral
+                </button>
+              </td>
+            </tr>
+            <tr
+              data-testid="transaction-5d5c1f747e01cd704f18f865"
+            >
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f865-userId"
+              >
+                employee5
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f865-description"
+              >
+                refund
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f865-merchant"
+              >
+                walmart
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f865-debit"
+              >
+                false
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f865-credit"
+              >
+                true
+              </td>
+              <td
+                data-testid="transaction-5d5c1f747e01cd704f18f865-amount"
+              >
+                100
+              </td>
+              <td>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f865-editButton"
+                  type="button"
+                >
+                  edit
+                </button>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f865-deleteButton"
+                >
+                  delete
+                </button>
+                <button
+                  data-testid="transaction-5d5c1f747e01cd704f18f865-numeralButton"
+                >
+                  To Numeral
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <button
+      data-testid="addButton"
+    >
+      Add New Transaction
+    </button>
+    <div>
+      <canvas
+        height="300"
+        role="img"
+        width="300"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Transactions Page should show user "employee4" with amount "150" 3`] = `
+<td
+  data-testid="transaction-5d5c1f747e01cd704f18f863-userId"
+>
+  employee4
+</td>
+`;

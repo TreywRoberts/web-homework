@@ -9,7 +9,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
     const [debit, setDebit] = useState(editFormData.debit);
     const [credit, setCredit] = useState(editFormData.credit);
 
-    console.log(editFormData)
+    // console.log(editFormData)
 
     const editTrans = (e) =>{
         e.preventDefault()
@@ -27,7 +27,7 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
         if (error){
             console.log(error)
         }
-        setTimeout(location.reload.bind(location), 500)
+        setTimeout(location.reload.bind(location), 200)
     }
 
 
