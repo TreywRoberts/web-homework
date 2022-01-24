@@ -9,8 +9,6 @@ const EditRow = ({editFormData, handleEditFormChange, handleCancel}) => {
     const [debit, setDebit] = useState(editFormData.debit);
     const [credit, setCredit] = useState(editFormData.credit);
 
-    // console.log(editFormData)
-
     const editTrans = (e) =>{
         e.preventDefault()
         editTransaction({
