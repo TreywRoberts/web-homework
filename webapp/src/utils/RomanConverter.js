@@ -28,5 +28,4 @@ function RomanConverter(num){
     }
     return roman
 }
-console.log(RomanConverter(105))
 export default RomanConverter

@@ -125,9 +125,6 @@ describe('Transactions Table', () => {
         <TxTable data={transactions} />
       </MockedProvider>
       )
-      // console.log(deleteMock)
-      // console.log(mockData)
-      // console.log(deleteMock2)
 
       const button = screen.getByTestId('transaction-5d5c1f747e01cd704f18f863-deleteButton')
 
